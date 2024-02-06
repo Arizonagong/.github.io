@@ -78,3 +78,9 @@ df.head()
 df['training_program_new']=df['training_program_1'] + '-' + df['training_program_2'] + '-' + df['training_program_3']
 df.head()
 # %%
+import pandas as pd
+eai = pd.read_csv("EAI.csv")
+eai
+# %%
+eai[(eai["Annual Salary"] > 40000) & (eai["Training Program"].isin(["No"]))]
+# %%
